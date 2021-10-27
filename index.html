@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiago Florencio - Dowhile 2021</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img src="images/build.svg" alt="Selo Rockseat" />
+          </span>
+          <img src="images/minha foto.jpeg" alt="foto pessoal" />
+        </div>
+
+        <h1 id="userName">Tiago Florencio</h1>
+        <a href="https://github.com/maykbrito" target="_blank">
+          <img src="images/github.svg" alt="icone github" /> @Tiagoflorencioj</a
+        >
+        <p>An instructor focused on helping pople start programming for web</p>
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://www.youtube.com/channel/maykbrito" target="_blank">
+              <img src="images/youtube.svg" alt="icone youtube" />
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="https://www.instagram.com/maykbrito/" target="_blank">
+              <img src="images/instagram.svg" alt="icone instagram" />
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="https://www.facebook.com/maykbrito/" target="_blank">
+              <img src="images/facebook.svg" alt="icone facebook" />
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="https://twitter.com/maykbrito" target="_blank">
+              <img src="images/twitter.svg" alt="icone twitter" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script>
+      /* function showmesomething(instagram) < {
+                alert(instagram)
+              }
+
+              Os valores acima "instagram, sao dados pelo programador."
+              através da "function", aplica-se uma ação para os dados de alguma const.
+
+
+            const github = 'tiagoflorencio'
+            const youtube = 'channel/UCC6ac_-xv0IUlNCXW2UcYXw'
+            const facebook = 'tiago.dejesus.7583992/'
+            const instagram = 'tiagoflorencioj'
+            const twitter = 'TiagoFlorenci16'
+
+            criado uma unica const "links" contendo todas as informações referntes a redes sociais, pode-se apagar essas const individuais
+
+            showmesomething(links.instagram)*/
+      /* no java scrypt, existe a regra de que não se pode ter expaçoes entre as palavras ao se escrever uma variável ou função, e tres formas de boa prática para se escrever as mesmas:
+            *camelCase
+            *PascalCase
+            *snake_case
+
+            */
+
+      const linksSocialMedia = {
+        github: 'tiagoflorencio',
+        youtube: 'channel/UCC6ac_-xv0IUlNCXW2UcYXw',
+        facebook: 'tiago.dejesus.7583992/',
+        instagram: 'tiagoflorencioj',
+        twitter: 'TiagoFlorenci16'
+      }
+
+      function ChangeSocialMediaLinks() {
+        /*No caso do id, não é necessário colocar todo o caminho para se chegar a um objeto no html,como no ex: document.getElementById('UserName').textContent = 'Tiago'. Basta colocar o nome do id como abaixo, e o que deseja fazer com ele.
+              ex: userName.textContent = 'Marcelo'*/
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+
+          //alert(li.children[0].href)
+        }
+      }
+      //quando o computador tem que contar algo ele começa do 0.
+
+      ChangeSocialMediaLinks()
+    </script>
+  </body>
+</html>
